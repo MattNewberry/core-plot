@@ -340,6 +340,7 @@
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
+					"-lCorePlot",
 				);
 				PRODUCT_NAME = AAPLot;
 				SDKROOT = iphonesimulator4.1;

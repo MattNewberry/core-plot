@@ -91,6 +91,7 @@
 	NSArray *xAxisLabels = [NSArray arrayWithObjects:@"Label A", @"Label B", @"Label C", @"Label D", @"Label E", nil];
 	NSUInteger labelLocation = 0;
 	NSMutableArray *customLabels = [NSMutableArray arrayWithCapacity:[xAxisLabels count]];
+	
 	for (NSNumber *tickLocation in customTickLocations) {
 		CPAxisLabel *newLabel = [[CPAxisLabel alloc] initWithText: [xAxisLabels objectAtIndex:labelLocation++] textStyle:x.labelTextStyle];
 		newLabel.tickLocation = [tickLocation decimalValue];

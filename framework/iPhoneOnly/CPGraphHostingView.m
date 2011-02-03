@@ -65,6 +65,8 @@
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+	[super touchesBegan:touches withEvent:event];
+	
 	// Ignore pinch or other multitouch gestures
 	if ([[event allTouches] count] > 1) {
 		return;		
@@ -81,6 +83,8 @@
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
 {
+	[super touchesMoved:touches withEvent:event];
+	
 	CGPoint pointOfTouch = [[[event touchesForView:self] anyObject] locationInView:self];
 	if (!collapsesLayers) {
 		pointOfTouch = [self.layer convertPoint:pointOfTouch toLayer:hostedGraph];
@@ -92,6 +96,8 @@
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event 
 {
+	[super touchesEnded:touches withEvent:event];
+	
 	CGPoint pointOfTouch = [[[event touchesForView:self] anyObject] locationInView:self];
 	if (!collapsesLayers) {
 		pointOfTouch = [self.layer convertPoint:pointOfTouch toLayer:hostedGraph];
@@ -103,6 +109,8 @@
 
 -(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event 
 {
+	[super touchesCancelled:touches withEvent:event];
+	
 	[hostedGraph pointingDeviceCancelledEvent:event];
 }
 

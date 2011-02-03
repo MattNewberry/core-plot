@@ -116,6 +116,7 @@ NSString * const CPBarPlotBindingBarLengths = @"barLengths";		///< Bar lengths.
 	barPlot.barsAreHorizontal = horizontal;
 	barPlot.barWidth = 10.0;
 	barPlot.cornerRadius = 2.0;
+	
 	CPGradient *fillGradient = [CPGradient gradientWithBeginningColor:color endingColor:[CPColor blackColor]];
 	fillGradient.angle = (horizontal ? -90.0 : 0.0);
 	barPlot.fill = [CPFill fillWithGradient:fillGradient];
